@@ -28,14 +28,14 @@
 
 
                 <!--   -->
-                <label class="logo">[Ankit <i class='bx bx-wink-smile' style="color: #ffa600;"></i> Dubey]</label>
+                <label class="logo">[!Ankit <i class='bx bx-wink-smile' style="color: #ffffff;"></i>]</label>
                 <ul id="sidemenu">
                     <li><a class="active" href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#service">Services</a></li>
                     <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    
+
                     <!-- <i class="fas fa-times" onclick="closemenu()"></i> -->
                 </ul>
                 <!-- <i class="fas fa-bars" onclick="openmenu()"></i> -->
@@ -89,7 +89,7 @@
                     </div>
                     <div class="tab-contents" id="Education">
                         <ul>
-                            <li>SSC, Maharashtra Board, Completed in 2018</li>
+                            <li><B>SSC, Maharashtra Board:<B> Completed in 2018</li>
                             <li>HSC, Maharashtra Board, Completed in 2020</li>
                             <li>B.Sc in Computer Science, R. D. National College, Completed in 2023</li>
                             <li>M.Sc in Computer Science, University of Mumbai, Pursuing</li>
@@ -175,7 +175,8 @@
                         <a href="https://x.com/Akki_D_102/"><i class="fa-brands fa-twitter"></i></a>
                         <a href="https://github.com/Ankit7276/"><i class="fa-brands fa-github"></i></a>
                     </div>
-                    <a class="btn" href="images/Ankit CV.pdf" >Download CV</a>
+                    <a class="btn" href="images/Ankit CV.pdf">Download CV</a>
+                    <!-- <button class="btn"><span>Submit</span><img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="62" width="62"></button> -->
                     <!-- <li><a href="CV.html" >Download CV</a></li> -->
                 </div>
                 <div class="contact-right">
@@ -198,7 +199,35 @@
     <button id="scrollToTopButton"><i class='bx bx-up-arrow-alt'></i></button>
 
     <!-- JavaScript -->
-    <script src="scripts.js"></script>
+    <script src="script.js">
+
+
+
+        //Skill Section 
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+        // Close the menu after a link is clicked
+        document.querySelectorAll("nav ul li a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.getElementById("check").checked = false;
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
