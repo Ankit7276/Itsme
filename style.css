@@ -31,66 +31,6 @@ ul {
     list-style: none;
 }
 
-/* Header */
-/* #header {
-    background: linear-gradient(to right, #f0f0f0, #d6d6d6);
-    padding: 1.5rem 0;
-}
-
-#header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#header nav h1 {
-    font-size: 1.8rem;
-    color: #333;
-}
-
-#header nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-
-#header nav ul li a {
-    color: #333;
-    font-weight: 600;
-    padding: 0.5rem;
-}
-
-#header nav ul i {
-    display: none;
-} */
-
-/* Header for mobile */
-/* @media (max-width: 768px) {
-    #header nav ul {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        flex-direction: column;
-        text-align: center;
-        display: none;
-    }
-
-    #header nav ul i {
-        display: inline;
-    }
-
-    #header nav ul.active {
-        display: flex;
-    }
-
-    #header nav i {
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-} */
-
-
 nav {
     background: #0082e6;
     height: 80px;
@@ -154,8 +94,8 @@ nav {
     }
   }
   
-  /* Responsive media query code for small screen */
-  @media (max-width: 890px) {
+ /* Responsive media query code for small screen */
+@media (max-width: 890px) {
     .checkbtn {
       display: block;
     }
@@ -173,6 +113,7 @@ nav {
       left: -100%;
       text-align: center;
       transition: all .5s;
+      z-index: 10; /* Ensure menu is above all other content */
     }
   
     nav ul li {
@@ -191,10 +132,11 @@ nav {
       color: #0082e6;
     }
   
-    #check:checked~ul {
+    #check:checked ~ ul {
       left: 0;
     }
-  }
+}
+
 
 
 
@@ -462,3 +404,30 @@ nav {
         width: 100%;
     }
 }
+
+
+.footer {
+    background: #333;
+    padding: 1.5rem 0;
+    color: #fff;
+    text-align: center; /* Centers the text within the footer */
+}
+
+.copyright {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Aligns vertically if needed */
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.fa-heart {
+    color: #ff4d4d; /* Optional: adds a nice red color to the heart icon */
+}
+
+
+
+
